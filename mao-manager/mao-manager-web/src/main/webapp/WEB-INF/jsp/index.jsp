@@ -65,7 +65,7 @@
 				<iframe class="body-iframe" name="iframe0" width="100%" height="99%" src="home.html" frameborder="0" data-id="home.html" seamless></iframe>
 			</div>
 		</section>
-		<div class="layout-footer">@2016 0.1 www.mycodes.net</div>
+		<!-- <div class="layout-footer">@2016 0.1 www.mycodes.net</div> -->
 	</div>
 	<script type="text/javascript" src="../common/lib/jquery-1.9.0.min.js"></script>
 	<script type="text/javascript" src="../common/js/sccl.js"></script>

@@ -395,26 +395,30 @@ $(function(){
 
 	/*菜单json*/
 	var menu = [{"id":"1","name":"主菜单","parentId":"0","url":"","icon":"","order":"1","isHeader":"1","childMenus":[
-					{"id":"3","name":"商品管理","parentId":"1","url":"","icon":"&#xe604;","order":"1","isHeader":"0","childMenus":[
-						{"id":"4","name":"品牌管理","parentId":"3","url":"test1.html","icon":"","order":"1","isHeader":"0","childMenus":""},
-						{"id":"5","name":"分类管理","parentId":"3","url":"test2.html","icon":"","order":"1","isHeader":"0","childMenus":""}
+					{"id":"11","name":"客房管理","parentId":"1","url":"","icon":"&#xe604;","order":"1","isHeader":"0","childMenus":[
+						{"id":"111","name":"品牌管理","parentId":"11","url":"test1.html","icon":"","order":"1","isHeader":"0","childMenus":""},
+						{"id":"111","name":"分类管理","parentId":"11","url":"test2.html","icon":"","order":"1","isHeader":"0","childMenus":""}
 					]},
-					{"id":"6","name":"订单管理","parentId":"1","url":"","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":[
-						{"id":"7","name":"已付款","parentId":"6","url":"home3.html","icon":"","order":"1","isHeader":"0","childMenus":""},
-						{"id":"8","name":"未付款","parentId":"6","url":"home4.html","icon":"","order":"1","isHeader":"0","childMenus":""}
+					{"id":"12","name":"订单管理","parentId":"1","url":"","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":[
+						{"id":"121","name":"已付款","parentId":"12","url":"home3.html","icon":"","order":"1","isHeader":"0","childMenus":""},
+						{"id":"122","name":"未付款","parentId":"12","url":"home4.html","icon":"","order":"1","isHeader":"0","childMenus":""}
+					]},
+					{"id":"13","name":"系统管理","parentId":"1","url":"","icon":"&#xe606;","order":"1","isHeader":"0","childMenus":[
+						{"id":"131","name":"已付款","parentId":"13","url":"home5.html","icon":"","order":"1","isHeader":"0","childMenus":""},
+						{"id":"132","name":"未付款","parentId":"13","url":"home6.html","icon":"","order":"1","isHeader":"0","childMenus":""}
 					]}
 				]},
-				{"id":"2","name":"框架案例","parentId":"0","url":"","icon":"","order":"2","isHeader":"1","childMenus":[
-					{"id":"9","name":"新功能","parentId":"2","url":"","icon":"","order":"1","isHeader":"0","childMenus":""},
-					{"id":"10","name":"多级","parentId":"2","url":"","icon":"","order":"1","isHeader":"0","childMenus":[
-						{"id":"11","name":"一级","parentId":"10","url":"","icon":"","order":"1","isHeader":"0","childMenus":""},
-						{"id":"12","name":"一级","parentId":"10","url":"","icon":"","order":"1","isHeader":"0","childMenus":[
-							{"id":"13","name":"二级","parentId":"12","url":"","icon":"","order":"1","isHeader":"0","childMenus":""},
-							{"id":"14","name":"二级","parentId":"12","url":"","icon":"","order":"1","isHeader":"0","childMenus":[
-								{"id":"15","name":"三级","parentId":"14","url":"","icon":"","order":"1","isHeader":"0","childMenus":""},
-								{"id":"16","name":"三级","parentId":"14","url":"","icon":"","order":"1","isHeader":"0","childMenus":[
-									{"id":"17","name":"四级","parentId":"16","url":"","icon":"","order":"1","isHeader":"0","childMenus":""},
-									{"id":"18","name":"四级","parentId":"16","url":"","icon":"","order":"1","isHeader":"0","childMenus":""}
+				{"id":"2","name":"预定系统","parentId":"0","url":"","icon":"","order":"2","isHeader":"1","childMenus":[
+					{"id":"21","name":"新功能","parentId":"2","url":"","icon":"","order":"1","isHeader":"0","childMenus":""},
+					{"id":"22","name":"多级","parentId":"2","url":"","icon":"","order":"1","isHeader":"0","childMenus":[
+						{"id":"221","name":"一级","parentId":"22","url":"","icon":"","order":"1","isHeader":"0","childMenus":""},
+						{"id":"222","name":"一级","parentId":"22","url":"","icon":"","order":"1","isHeader":"0","childMenus":[
+							{"id":"2221","name":"二级","parentId":"222","url":"","icon":"","order":"1","isHeader":"0","childMenus":""},
+							{"id":"2222","name":"二级","parentId":"222","url":"","icon":"","order":"1","isHeader":"0","childMenus":[
+								{"id":"22221","name":"三级","parentId":"2222","url":"","icon":"","order":"1","isHeader":"0","childMenus":""},
+								{"id":"22222","name":"三级","parentId":"2222","url":"","icon":"","order":"1","isHeader":"0","childMenus":[
+									{"id":"222221","name":"四级","parentId":"22222","url":"","icon":"","order":"1","isHeader":"0","childMenus":""},
+									{"id":"222222","name":"四级","parentId":"22222","url":"","icon":"","order":"1","isHeader":"0","childMenus":""}
 								]}
 							]}
 						]}
