@@ -16,6 +16,6 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
-	<mvc:resources location="/WEB-INF/bssets/" mapping="/bssets/**"/>
+	<mvc:resources location="/WEB-INF/common/" mapping="/common/**"/>
 </beans>
 	
