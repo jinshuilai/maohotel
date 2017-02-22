@@ -28,7 +28,7 @@
 		<property name="configLocation" value="classpath:SqlMapConfig.xml" />
 	</bean>
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.mao.hotel.mapper" />
+		<property name="basePackage" value="com.mao.hotel" />
 	</bean>
 </beans>
 	

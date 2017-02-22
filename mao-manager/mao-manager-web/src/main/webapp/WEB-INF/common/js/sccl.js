@@ -395,17 +395,22 @@ $(function(){
 
 	/*菜单json*/
 	var menu = [{"id":"1","name":"主菜单","parentId":"0","url":"","icon":"","order":"1","isHeader":"1","childMenus":[
-					{"id":"11","name":"客房管理","parentId":"1","url":"","icon":"&#xe604;","order":"1","isHeader":"0","childMenus":[
-						{"id":"111","name":"品牌管理","parentId":"11","url":"test1.html","icon":"","order":"1","isHeader":"0","childMenus":""},
-						{"id":"111","name":"分类管理","parentId":"11","url":"test2.html","icon":"","order":"1","isHeader":"0","childMenus":""}
+					{"id":"14","name":"权限管理","parentId":"1","url":"","icon":"&#xe600;","order":"1","isHeader":"0","childMenus":[
+						{"id":"141","name":"用户管理","parentId":"14","url":"home5.html","icon":"","order":"1","isHeader":"0","childMenus":""},
+						{"id":"142","name":"角色管理","parentId":"14","url":"home6.html","icon":"","order":"1","isHeader":"0","childMenus":""}
 					]},
-					{"id":"12","name":"订单管理","parentId":"1","url":"","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":[
-						{"id":"121","name":"已付款","parentId":"12","url":"home3.html","icon":"","order":"1","isHeader":"0","childMenus":""},
-						{"id":"122","name":"未付款","parentId":"12","url":"home4.html","icon":"","order":"1","isHeader":"0","childMenus":""}
+					{"id":"11","name":"客房管理","parentId":"1","url":"","icon":"&#xe604;","order":"2","isHeader":"0","childMenus":[
+						{"id":"111","name":"客房信息","parentId":"11","url":"test1.html","icon":"","order":"1","isHeader":"0","childMenus":""},
+						{"id":"112","name":"客房配件信息","parentId":"11","url":"test1.html","icon":"","order":"1","isHeader":"0","childMenus":""},
+						{"id":"113","name":"预售信息","parentId":"11","url":"test2.html","icon":"","order":"1","isHeader":"0","childMenus":""}
 					]},
-					{"id":"13","name":"系统管理","parentId":"1","url":"","icon":"&#xe606;","order":"1","isHeader":"0","childMenus":[
-						{"id":"131","name":"已付款","parentId":"13","url":"home5.html","icon":"","order":"1","isHeader":"0","childMenus":""},
-						{"id":"132","name":"未付款","parentId":"13","url":"home6.html","icon":"","order":"1","isHeader":"0","childMenus":""}
+					{"id":"12","name":"客商管理","parentId":"1","url":"","icon":"&#xe609;","order":"3","isHeader":"0","childMenus":[
+						{"id":"121","name":"会员管理","parentId":"12","url":"home3.html","icon":"","order":"1","isHeader":"0","childMenus":""},
+						{"id":"122","name":"酒店管理","parentId":"12","url":"home4.html","icon":"","order":"1","isHeader":"0","childMenus":""}
+					]},
+					{"id":"13","name":"系统管理","parentId":"1","url":"","icon":"&#xe601;","order":"4","isHeader":"0","childMenus":[
+						{"id":"131","name":"系统设置","parentId":"13","url":"home5.html","icon":"","order":"1","isHeader":"0","childMenus":""},
+						{"id":"132","name":"日志查看","parentId":"13","url":"home6.html","icon":"","order":"1","isHeader":"0","childMenus":""}
 					]}
 				]},
 				{"id":"2","name":"预定系统","parentId":"0","url":"","icon":"","order":"2","isHeader":"1","childMenus":[

@@ -11,4 +11,7 @@
     </plugin>
 	</plugins>
 	
+	<mappers>
+		<mapper resource="com/mao/hotel/system/UserMapper.xml"/>
+	</mappers>
 </configuration>

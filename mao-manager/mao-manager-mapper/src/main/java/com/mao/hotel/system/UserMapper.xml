@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mao.hotel.system.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.mao.hotel.system.User" >
+    <id column="fid" property="id" jdbcType="INTEGER" />
+    <result column="fnumber" property="number" jdbcType="VARCHAR" />
+    <result column="fname" property="name" jdbcType="VARCHAR" />
+    <result column="fpassword" property="password" jdbcType="VARCHAR" />
+    <result column="fnickname" property="nickName" jdbcType="VARCHAR" />
+    <result column="flockeddate" property="lockedDate" jdbcType="TIMESTAMP" />
+    <result column="flocked" property="locked" jdbcType="BIT" />
+    <result column="fdisable" property="disable" jdbcType="BIT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    fid, fnumber, fname, fpassword, fnickname, flockeddate, flocked, fdisable
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_user
+    where fid = #{fid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from sys_user
+    where fid = #{fid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.mao.hotel.system.User" >
+    insert into sys_user (fid, fnumber, fname, 
+      fpassword, fnickname, flockeddate, 
+      flocked, fdisable)
+    values (#{fid,jdbcType=INTEGER}, #{fnumber,jdbcType=VARCHAR}, #{fname,jdbcType=VARCHAR}, 
+      #{fpassword,jdbcType=VARCHAR}, #{fnickname,jdbcType=VARCHAR}, #{flockeddate,jdbcType=TIMESTAMP}, 
+      #{flocked,jdbcType=BIT}, #{fdisable,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.mao.hotel.system.User" >
+    insert into sys_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="fid != null" >
+        fid,
+      </if>
+      <if test="fnumber != null" >
+        fnumber,
+      </if>
+      <if test="fname != null" >
+        fname,
+      </if>
+      <if test="fpassword != null" >
+        fpassword,
+      </if>
+      <if test="fnickname != null" >
+        fnickname,
+      </if>
+      <if test="flockeddate != null" >
+        flockeddate,
+      </if>
+      <if test="flocked != null" >
+        flocked,
+      </if>
+      <if test="fdisable != null" >
+        fdisable,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="fid != null" >
+        #{fid,jdbcType=INTEGER},
+      </if>
+      <if test="fnumber != null" >
+        #{fnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fname != null" >
+        #{fname,jdbcType=VARCHAR},
+      </if>
+      <if test="fpassword != null" >
+        #{fpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="fnickname != null" >
+        #{fnickname,jdbcType=VARCHAR},
+      </if>
+      <if test="flockeddate != null" >
+        #{flockeddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flocked != null" >
+        #{flocked,jdbcType=BIT},
+      </if>
+      <if test="fdisable != null" >
+        #{fdisable,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mao.hotel.system.User" >
+    update sys_user
+    <set >
+      <if test="fnumber != null" >
+        fnumber = #{fnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fname != null" >
+        fname = #{fname,jdbcType=VARCHAR},
+      </if>
+      <if test="fpassword != null" >
+        fpassword = #{fpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="fnickname != null" >
+        fnickname = #{fnickname,jdbcType=VARCHAR},
+      </if>
+      <if test="flockeddate != null" >
+        flockeddate = #{flockeddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flocked != null" >
+        flocked = #{flocked,jdbcType=BIT},
+      </if>
+      <if test="fdisable != null" >
+        fdisable = #{fdisable,jdbcType=BIT},
+      </if>
+    </set>
+    where fid = #{fid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mao.hotel.system.User" >
+    update sys_user
+    set fnumber = #{fnumber,jdbcType=VARCHAR},
+      fname = #{fname,jdbcType=VARCHAR},
+      fpassword = #{fpassword,jdbcType=VARCHAR},
+      fnickname = #{fnickname,jdbcType=VARCHAR},
+      flockeddate = #{flockeddate,jdbcType=TIMESTAMP},
+      flocked = #{flocked,jdbcType=BIT},
+      fdisable = #{fdisable,jdbcType=BIT}
+    where fid = #{fid,jdbcType=INTEGER}
+  </update>
+</mapper>
