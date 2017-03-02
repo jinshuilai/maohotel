@@ -1,5 +1,7 @@
 package com.mao.hotel.system;
 
+import java.util.List;
+
 public interface UserMapper {
 
 	public User selectByPrimaryKey(Integer id);
@@ -13,4 +15,6 @@ public interface UserMapper {
 	public void updateByPrimaryKeySelective(User user);
 	
 	public void updateByPrimaryKey(User user);
+
+	public List<User> selectAll();
 }

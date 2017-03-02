@@ -25,12 +25,15 @@
     where fid = #{fid,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.mao.hotel.system.User" >
+  	<selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+  		SELECT LAST_INSERT_ID()
+  	</selectKey>
     insert into sys_user (fid, fnumber, fname, 
       fpassword, fnickname, flockeddate, 
       flocked, fdisable)
-    values (#{fid,jdbcType=INTEGER}, #{fnumber,jdbcType=VARCHAR}, #{fname,jdbcType=VARCHAR}, 
-      #{fpassword,jdbcType=VARCHAR}, #{fnickname,jdbcType=VARCHAR}, #{flockeddate,jdbcType=TIMESTAMP}, 
-      #{flocked,jdbcType=BIT}, #{fdisable,jdbcType=BIT})
+    values (#{id,jdbcType=INTEGER}, #{number,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{password,jdbcType=VARCHAR}, #{nickName,jdbcType=VARCHAR}, #{lockedDate,jdbcType=TIMESTAMP}, 
+      #{locked,jdbcType=BIT}, #{disable,jdbcType=BIT})
   </insert>
   <insert id="insertSelective" parameterType="com.mao.hotel.system.User" >
     insert into sys_user
@@ -116,13 +119,17 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.mao.hotel.system.User" >
     update sys_user
-    set fnumber = #{fnumber,jdbcType=VARCHAR},
-      fname = #{fname,jdbcType=VARCHAR},
-      fpassword = #{fpassword,jdbcType=VARCHAR},
-      fnickname = #{fnickname,jdbcType=VARCHAR},
-      flockeddate = #{flockeddate,jdbcType=TIMESTAMP},
-      flocked = #{flocked,jdbcType=BIT},
-      fdisable = #{fdisable,jdbcType=BIT}
-    where fid = #{fid,jdbcType=INTEGER}
+    set fnumber = #{number,jdbcType=VARCHAR},
+      fname = #{name,jdbcType=VARCHAR},
+      fpassword = #{password,jdbcType=VARCHAR},
+      fnickname = #{nickName,jdbcType=VARCHAR},
+      flockeddate = #{lockedDate,jdbcType=TIMESTAMP},
+      flocked = #{locked,jdbcType=BIT},
+      fdisable = #{disable,jdbcType=BIT}
+    where fid = #{id,jdbcType=INTEGER}
   </update>
+  
+  <select id="selectAll" resultMap="BaseResultMap">
+  	select * from sys_user;
+  </select>
 </mapper>

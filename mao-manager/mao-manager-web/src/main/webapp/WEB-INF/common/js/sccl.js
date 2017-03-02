@@ -396,7 +396,7 @@ $(function(){
 	/*菜单json*/
 	var menu = [{"id":"1","name":"主菜单","parentId":"0","url":"","icon":"","order":"1","isHeader":"1","childMenus":[
 					{"id":"14","name":"权限管理","parentId":"1","url":"","icon":"&#xe600;","order":"1","isHeader":"0","childMenus":[
-						{"id":"141","name":"用户管理","parentId":"14","url":"home5.html","icon":"","order":"1","isHeader":"0","childMenus":""},
+						{"id":"141","name":"用户管理","parentId":"14","url":"/user/list","icon":"","order":"1","isHeader":"0","childMenus":""},
 						{"id":"142","name":"角色管理","parentId":"14","url":"home6.html","icon":"","order":"1","isHeader":"0","childMenus":""}
 					]},
 					{"id":"11","name":"客房管理","parentId":"1","url":"","icon":"&#xe604;","order":"2","isHeader":"0","childMenus":[
